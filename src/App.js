@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   const [weather, setWeather] = useState({});
-  const [locations, setLocations] = useState("Lahore");
+  const [locations, setLocations] = useState("Karachi");
   const [photos, setPhotos] = useState([]);
   useEffect(() => {
     ifClicked();
@@ -12,7 +12,7 @@ function App() {
 
   function ifClicked() {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${locations}&APPID=65466d84f30315eb8d51dd613f6bce43`
+      `https://api.openweathermap.org/data/2.5/weather?q=${locations}&APPID=65466d84f30315eb8d51dd613f6bce43`
     )
       .then((res) => {
         if (res.ok) {
